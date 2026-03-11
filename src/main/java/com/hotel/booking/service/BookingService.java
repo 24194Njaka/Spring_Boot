@@ -10,5 +10,5 @@ public class BookingService {
 
     public List<Booking> getBookings() {
         return bookings;
-    }.
+    }
 }

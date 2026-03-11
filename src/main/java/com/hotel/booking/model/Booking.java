@@ -1,7 +1,12 @@
 package com.hotel.booking.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDate;
 
+
+@Getter
 public class Booking {
     private String clientName;
     private String phone;
@@ -20,5 +25,7 @@ public class Booking {
         this.roomNumber = roomNumber;
         this.roomDescription = roomDescription;
         this.bookingDate = bookingDate;
+
+
     }
 }
