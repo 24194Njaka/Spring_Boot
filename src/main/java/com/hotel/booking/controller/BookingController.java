@@ -16,4 +16,12 @@ public class BookingController {
     public List<Booking> getBookings() {
         return bookingService.getBookings();
     }
+
+    @PostMapping
+    public List<Booking> addBooking(@RequestBody Booking booking) {
+        if (booking.getRoomNumber() < 1 || booking.getRoomNumber() > 9) {
+            throw new RuntimeException("Le numéro de chambre doit être compris entre 1 et 9.");
+        }
+        return bookingService.addBooking(booking);
+    }
 }
